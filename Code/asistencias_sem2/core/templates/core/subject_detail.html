@@ -1,0 +1,37 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h2>{{ subject.name }}</h2>
+<p>Código: {{ subject.code }}</p>
+<p>Semestre: {{ subject.semester }}</p>
+<p>Créditos: {{ subject.credits }}</p>
+<p>Grupo: {{ subject.group }}</p>
+
+<h3 class="mt-4">Estudiantes inscritos</h3>
+<ul class="list-group">
+    {% for student in students %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            {% if student.photo %}
+            <img src="{{ student.photo.url }}" alt="Foto de {{ student.first_name }}" 
+                class="rounded-circle me-3" width="40" height="40">
+            {% else %}
+            <div class="rounded-circle bg-secondary me-3" style="width: 40px; height: 40px;"></div>
+            {% endif %}
+            
+            <!-- Información del estudiante -->
+            <div>
+                {{ student.first_name }} {{ student.last_name }} - {{ student.student_code }}
+            </div>
+        </div>
+        
+        {% if is_professor and student.id %}
+        <a href="{% url 'remove_student' subject.id student.id %}" 
+        class="btn btn-danger btn-sm">Eliminar</a>
+        {% endif %}
+    </li>
+    {% empty %}
+    <li class="list-group-item">No hay estudiantes inscritos.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

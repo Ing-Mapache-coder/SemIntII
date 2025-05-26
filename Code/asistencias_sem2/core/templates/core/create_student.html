@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h2>Crear Nuevo Estudiante</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+{% endblock %}

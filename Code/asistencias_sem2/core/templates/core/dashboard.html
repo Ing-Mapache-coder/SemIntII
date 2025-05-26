@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h1>Bienvenido, {{ user.first_name }}</h1>
+
+{% if user.is_professor %}
+    <div class="mt-4">
+        <h3>Acciones de profesor</h3>
+        <a href="{% url 'create_subject' %}" class="btn btn-primary">Crear Materia</a>
+        <a href="{% url 'create_student' %}" class="btn btn-primary">Crear Estudiante</a>
+        <a href="{% url 'assign_subject' %}" class="btn btn-primary">Asignar Materia</a>
+    </div>
+{% endif %}
+
+<div class="mt-4">
+    <h3>Tus materias</h3>
+    <a href="{% url 'subject_list' %}" class="btn btn-secondary">Ver todas las materias</a>
+</div>
+{% endblock %}
