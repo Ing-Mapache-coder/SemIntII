@@ -1,0 +1,31 @@
+ANÁLISIS FACIAL - 2025-06-08 18:57:03
+==================================================
+
+Imagen analizada: imagenes_recibidas\imagen_20250608_185703.jpg
+Método: OpenCV + Correlación
+
+RESULTADOS DE COMPARACIÓN:
+
+1. Persona: Felipe
+   ¿Es la misma persona?: SÍ
+   Similitud: 54.04999923706055%
+   Confianza: 0.5400000214576721
+
+2. Persona: Daniel
+   ¿Es la misma persona?: SÍ
+   Similitud: 52.72999954223633%
+   Confianza: 0.5270000100135803
+
+3. Persona: Juan
+   ¿Es la misma persona?: NO
+   Similitud: 38.849998474121094%
+   Confianza: 0.3889999985694885
+
+4. Persona: Lorena
+   ¿Es la misma persona?: NO
+   Similitud: 5.730000019073486%
+   Confianza: 0.05700000002980232
+
+CONCLUSIÓN:
+✅ La persona en la imagen PODRÍA SER Felipe
+   Similitud: 54.04999923706055%

@@ -1,0 +1,7 @@
+ANÁLISIS FACIAL - 2025-06-08 18:55:33
+==================================================
+
+Imagen analizada: imagenes_recibidas\imagen_20250608_185533.jpg
+Método: OpenCV + Correlación
+
+ERROR: No se detectó ningún rostro en la imagen subida
